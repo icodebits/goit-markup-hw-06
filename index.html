@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Studio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,6 +37,11 @@
                     </li>
                 </ul>
             </address>
+            <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+                <svg class="icon-mobile-menu" width="32" height="22">
+                    <use xlink:href="images/icons.svg#icon-mobile-menu" />
+                </svg>
+            </button>
         </div>
     </header>
     <main>
@@ -101,17 +107,29 @@
                 <ul class="service">
                     <li>
                         <div class="service-card-img">
-                            <img src="images/img1.jpg" alt="Monitor" width="360" height="300">
+                            <img src="images/img1.jpg"
+                                srcset="images/img1.jpg 1x, images/img1@2x.jpg 2x"
+                                width="360" height="300"
+                                alt="Monitor"
+                                loading="lazy">
                         </div>
                     </li>
                     <li>
                         <div class="service-card-img">
-                            <img src="images/img2.jpg" alt="Mobile device screens" width="360" height="300">
+                            <img src="images/img2.jpg"
+                                srcset="images/img2.jpg 1x, images/img2@2x.jpg 2x"
+                                width="360" height="300"
+                                alt="Mobile device screens"
+                                loading="lazy">
                         </div>
                     </li>
                     <li>
                         <div class="service-card-img">
-                            <img src="images/img3.jpg" alt="Hand holding a phone on the laptop in background" width="360" height="300">
+                            <img src="images/img3.jpg"
+                                srcset="images/img3.jpg 1x, images/img3@2x.jpg 2x"
+                                width="360" height="300"
+                                alt="Hand holding a phone on the laptop in background"
+                                loading="lazy">
                         </div>
                     </li>
                 </ul>
@@ -124,7 +142,11 @@
                 <h2 class="section-title team-title">Our Team</h2>
                 <ul class="team-list">
                     <li class="team-card">
-                        <img src="images/img4.jpg" alt="Mark Guerrero - Product Designer" width="264" height="260">
+                        <img src="images/img4.jpg" 
+                                srcset="images/img4.jpg 1x, images/img4@2x.jpg 2x"
+                                width="264" height="260"
+                                alt="Mark Guerrero - Product Designer"
+                                loading="lazy">
                         <div class="team-card-content">
                             <h3 class="team-card-title">Mark Guerrero</h3>
                             <p class="team-card-text">Product Designer</p>
@@ -161,7 +183,11 @@
                         </div>
                     </li>
                     <li class="team-card">
-                        <img src="images/img5.jpg" alt="Tom Ford - Frontend Developer" width="264" height="260">
+                        <img src="images/img5.jpg"
+                                srcset="images/img5.jpg 1x, images/img5@2x.jpg 2x"
+                                width="264" height="260"
+                                alt="Tom Ford - Frontend Developer"
+                                loading="lazy">
                         <div class="team-card-content">
                             <h3 class="team-card-title">Tom Ford</h3>
                             <p class="team-card-text">Frontend Developer</p>
@@ -198,7 +224,11 @@
                         </div>
                     </li>
                     <li class="team-card">
-                        <img src="images/img6.jpg" alt="Camila Garcia - Marketing" width="264" height="260">
+                        <img src="images/img6.jpg"
+                                srcset="images/img6.jpg 1x, images/img6@2x.jpg 2x" 
+                                width="264" height="260"
+                                alt="Camila Garcia - Marketing"
+                                loading="lazy">
                         <div class="team-card-content">
                             <h3 class="team-card-title">Camila Garcia</h3>
                             <p class="team-card-text">Marketing</p>
@@ -235,7 +265,11 @@
                         </div>
                     </li>
                     <li class="team-card">
-                        <img src="images/img7.jpg" alt="Daniel Wilson - UI Designer" width="264" height="260">
+                        <img src="images/img7.jpg"
+                                srcset="images/img7.jpg 1x, images/img7@2x.jpg 2x"
+                                width="264" height="260"
+                                alt="Daniel Wilson - UI Designer"
+                                loading="lazy">
                         <div class="team-card-content">
                             <h3 class="team-card-title">Daniel Wilson</h3>
                             <p class="team-card-text">UI Designer</p>
@@ -431,6 +465,73 @@
             </form>
         </div>
     </div>
+    <div class="menu-container js-menu-container" id="mobile-menu">
+        <button class="menu-toggle js-close-menu">
+            <svg width="8" height="8" class="menu-toggle-icon">
+                <use xlink:href="images/icons.svg#icon-close" />
+            </svg>
+        </button>
+        <ul class="mobile-menu-nav-list">
+            <li>
+                <a href="index.html" class="mobile-menu-nav current">Studio</a>
+            </li>
+            <li>
+                <a href="portfolio.html" class="mobile-menu-nav">Portfolio</a>
+            </li>
+            <li>
+                <a href="contacts.html" class="mobile-menu-nav">Contacts</a>
+            </li>
+        </ul>
+
+        <address>
+            <ul class="mobile-menu-address">
+                <li>
+                    <a href="tel:+110001111111" class="menu-address accent">+11 (000) 111-11-11</a>
+                </li>
+                <li>
+                    <a href="mailto:info@devstudio.com" class="menu-address">info@devstudio.com</a>
+                </li>
+            </ul>
+        </address>
+
+        <ul class="social-list-mobile-menu">
+            <li class="social-list-item">
+                <a href="#">
+                    <svg width="24" height="24" class="social-list-icon social-icon-footer">
+                        <use xlink:href="images/icons.svg#icon-instagram" />
+                    </svg>
+                </a>
+            </li>
+            <li class="social-list-item">
+                <a href="#">
+                    <svg width="24" height="24" class="social-list-icon social-icon-footer">
+                        <use xlink:href="images/icons.svg#icon-twitter" />
+                    </svg>
+                </a>
+            </li>
+            <li class="social-list-item">
+                <a href="#">
+                    <svg width="24" height="24" class="social-list-icon social-icon-footer">
+                        <use xlink:href="images/icons.svg#icon-facebook" />
+                    </svg>
+                </a>
+            </li>
+            <li class="social-list-item">
+                <a href="#">
+                    <svg width="24" height="24" class="social-list-icon social-icon-footer">
+                        <use xlink:href="images/icons.svg#icon-linkedin" />
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </div>  
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
 </body>
 </html>
